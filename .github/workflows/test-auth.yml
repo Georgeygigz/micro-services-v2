@@ -1,6 +1,5 @@
-name: test
-on:
-  pull_request
+name: test-auth
+on: pull_request
 jobs:
   build:
     runs-on: ubuntu-latest
