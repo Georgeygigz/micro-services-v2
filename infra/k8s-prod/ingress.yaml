@@ -77,24 +77,3 @@ spec:
     app.kubernetes.io/name: ingress-nginx
     app.kubernetes.io/instance: ingress-nginx
     app.kubernetes.io/component: controller
-webhooks:
-  - name: validate.nginx.ingress.kubernetes.io
-    rules:
-      - apiGroups:
-          - extensions
-          - networking.k8s.io
-        apiVersions:
-          - v1beta1
-        operations:
-          - CREATE
-          - UPDATE
-        resources:
-          - ingresses
-    failurePolicy: Fail
-    sideEffects: None
-    admissionReviewVersions: ['v1']
-    clientConfig:
-      service:
-        namespace: ingress-nginx
-        name: ingress-nginx-controller-admission
-        path: /extensions/v1beta1/ingresses
