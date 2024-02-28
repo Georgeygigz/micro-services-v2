@@ -15,7 +15,7 @@ spec:
       containers:
         - name: client
           image: 241619/client
-          imagePullPolicy: Never
+          # imagePullPolicy: Never
           env:
             - name: JWT_KEY
               valueFrom:

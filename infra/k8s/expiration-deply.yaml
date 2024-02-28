@@ -15,7 +15,7 @@ spec:
       containers:
         - name: expiration
           image: 241619/expiration
-          imagePullPolicy: Never
+          # imagePullPolicy: Never
           env:
             - name: NATS_CLIENT_ID
               valueFrom:
